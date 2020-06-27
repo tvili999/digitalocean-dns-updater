@@ -21,7 +21,7 @@ class DomainRecords:
         requests.put(self.__base_url + "/" + str(id), data={ "data": data }, headers=self.__headers)
     
     def create(self, ttl, name, data):
-        requests.post(self.__base_url, data={ "type": "A", "ttl": ttl, "name": name, "data": ip }, headers=self.__headers)
+        requests.post(self.__base_url, data={ "type": "A", "ttl": ttl, "name": name, "data": data}, headers=self.__headers)
 
     def delete(self, id):
         requests.delete(self.__base_url + "/" + str(id), headers=self.__headers)
